@@ -57,7 +57,7 @@ int main() {
     plan.setInterestRate(rate / 100.0);
     plan.setYears(t);
 
-    cout << "\nPeriodic Deposit: $" << plan.getPeriodicDeposit() << endl;
+    cout << "Periodic Deposit: $" << plan.getPeriodicDeposit() << endl;
     cout << "Deposits per Year: " << plan.getM() << endl;
     cout << "Interest Rate: " << plan.getInterestRate() * 100 << "%" << endl;
     cout << "Years: " << plan.getYears() << endl;
@@ -65,7 +65,7 @@ int main() {
 
     double targetAmount;
     
-    cout << "\nEnter target amount to calculate required deposit: ";
+    cout << "Enter target amount to calculate required deposit: ";
     cin >> targetAmount;
 
     double requiredDeposit = plan.calculateRequiredDeposit(targetAmount);
