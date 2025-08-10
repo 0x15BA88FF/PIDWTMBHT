@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-
 using namespace std;
 
 class SavingsPlan {
@@ -39,23 +38,40 @@ public:
 };
 
 int main() {
-    SavingsPlan plan(500, 12, 0.048, 25);
+    SavingsPlan plan;
 
-    cout << "Periodic Deposit: $" << plan.getPeriodicDeposit() << endl;
+    double R, rate;
+    int mVal, t;
+
+    cout << "Enter periodic deposit amount: ";
+    cin >> R;
+    cout << "Enter deposits per year: ";
+    cin >> mVal;
+    cout << "Enter annual interest rate (in %): ";
+    cin >> rate;
+    cout << "Enter number of years: ";
+    cin >> t;
+
+    plan.setPeriodicDeposit(R);
+    plan.setM(mVal);
+    plan.setInterestRate(rate / 100.0);
+    plan.setYears(t);
+
+    cout << "\nPeriodic Deposit: $" << plan.getPeriodicDeposit() << endl;
     cout << "Deposits per Year: " << plan.getM() << endl;
     cout << "Interest Rate: " << plan.getInterestRate() * 100 << "%" << endl;
     cout << "Years: " << plan.getYears() << endl;
     cout << "Total Accumulated: $" << plan.calculateTotalAccumulated() << endl;
 
-    SavingsPlan goalPlan;
-    goalPlan.setM(12);
-    goalPlan.setInterestRate(0.05);
-    goalPlan.setYears(30);
+    double targetAmount;
+    
+    cout << "\nEnter target amount to calculate required deposit: ";
+    cin >> targetAmount;
 
-    double requiredDeposit = goalPlan.calculateRequiredDeposit(1000000);
-
-    cout << "\nRequired monthly deposit to reach $1,000,000 in 30 years at 5%: $"
-         << requiredDeposit << endl;
+    double requiredDeposit = plan.calculateRequiredDeposit(targetAmount);
+    
+    cout << "Required periodic deposit to reach $" << targetAmount 
+         << " in " << plan.getYears() << " years: $" << requiredDeposit << endl;
 
     return 0;
 }
