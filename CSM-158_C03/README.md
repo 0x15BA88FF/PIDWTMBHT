@@ -1,1 +1,17 @@
+17. Typically, everyone saves money periodically for retirement, buying a house, or for some other purposes. If you are saving money for retirement, then the money you put in a retirement fund is tax sheltered and your employer also makes some contribution into your retirement fund. In this exercise, for simplicity, we assume that the money is put into an account that pays a fixed interest rate, and money is deposited into the account at the end of the specified period. Suppose that a person deposits R dollars m times a year into an account that pays r% interest compounded m times a year for t years. Then the total accumulated at the end of t years is given by
 
+    R[(1+(r/m))^(m*t) − 1] / (r/m)
+
+For example, suppose that you deposit $500 at the end of each month into an account that pays 4.8% interest per year compounded monthly for 25 years. Then the total money accumulated into the account is:
+
+    500[(1 + 0.048/12)^(300) − 1] / (0.048/12) = $289,022.42
+
+On the other hand, suppose that you want to accumulate S dollars in t years and would like to know how much money, m times a year, you should deposit into an account that pays r% interest compounded m times a year. The periodic payment is given by the formula:
+
+    S(r/m) / [(1 + (r/m))^(m*t) − 1]
+
+Design a class that uses the above formulas to determine the total accumulated into an account and the periodic deposits to accumulate a specific amount. Your class should have instance variables to store the periodic deposit, the value of m, the interest rate, and the number of years the money will be saved. Add appropriate constructors to initialize instance variables, functions to set the values of the instance variables, functions to retrieve the values of the instance variables, and functions to do the necessary calculations and output results.
+
+--
+
+18. Define the class `bankAccount` to implement the basic properties of a bank account. An object of this class should store the following data: Account holder’s name (string), account number (int), account type (string, checking/saving), balance (double), and interest rate (double). (Store interest rate as a decimal number.) Add appropriate member functions to manipulate an object. Use a `static` member in the class to automatically assign account numbers. Also declare an array of 10 components of type `bankAccount` to process up to 10 customers and write a program to illustrate how to use your class.
