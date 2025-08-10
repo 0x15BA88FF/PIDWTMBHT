@@ -12,6 +12,6 @@ On the other hand, suppose that you want to accumulate S dollars in t years and 
 
 Design a class that uses the above formulas to determine the total accumulated into an account and the periodic deposits to accumulate a specific amount. Your class should have instance variables to store the periodic deposit, the value of m, the interest rate, and the number of years the money will be saved. Add appropriate constructors to initialize instance variables, functions to set the values of the instance variables, functions to retrieve the values of the instance variables, and functions to do the necessary calculations and output results.
 
---
+---
 
 18. Define the class `bankAccount` to implement the basic properties of a bank account. An object of this class should store the following data: Account holder’s name (string), account number (int), account type (string, checking/saving), balance (double), and interest rate (double). (Store interest rate as a decimal number.) Add appropriate member functions to manipulate an object. Use a `static` member in the class to automatically assign account numbers. Also declare an array of 10 components of type `bankAccount` to process up to 10 customers and write a program to illustrate how to use your class.
